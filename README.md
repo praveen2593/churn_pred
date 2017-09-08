@@ -16,5 +16,5 @@ Predicted possibility of customer churning, thereby targeting special campaigns 
 
 
 ## Credits
-This project would not be possible without the efforts of my fellow teammaates Anusha Mohan, Joseph Wiley, Jianda Zhou
+This project would not be possible without the efforts of my fellow teammates Joseph Fang, Himani Agarwal
 
