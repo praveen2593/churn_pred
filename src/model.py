@@ -8,6 +8,9 @@ from datetime import datetime
 
 
 def feature_engineering(df):
+    '''
+    Clean Pandas dataframe and reduce to necessary features
+    '''
     df['last_trip_date'] = pd.to_datetime(df['last_trip_date'])
     df['signup_date'] =  pd.to_datetime(df['signup_date'])
     cut_off_date = datetime.strptime('2014-07-01', '%Y-%m-%d')
@@ -27,10 +30,12 @@ def feature_engineering(df):
        u'luxury_car_user', u'weekday_pct',
        u'city_Astapor', u'city_King\'s Landing',
        u'phone_Android', u'phone_iPhone', 'churn']
-
     return df, cols
 
 def gridsearch(model, scorer, param_grid, X, y):
+    '''     
+    Perform Gridsearch for the given model and return the best model
+    '''
     grid_search = GridSearchCV(model, param_grid=param_grid, verbose=1, n_jobs=-1)
     grid_search.fit(X, y)
     print(grid_search.best_estimator_)
